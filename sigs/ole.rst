@@ -3,7 +3,6 @@ Signature::
     * Calling convention: WINAPI
     * Category: ole
     * Library: ole32
-    * Mode: exploit
     * Return value: HRESULT
 
 

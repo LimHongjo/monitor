@@ -5,7 +5,6 @@ Signature::
     * Is success: 1
     * Library: vbe6
     * Logging: always
-    * Mode: office
     * Return value: void *
     * Special: true
 

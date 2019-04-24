@@ -9,10 +9,6 @@ Signature::
 NtCreateThread
 ==============
 
-Signature::
-
-    * Mode: exploit
-
 Parameters::
 
     ** PHANDLE ThreadHandle thread_handle
@@ -111,10 +107,6 @@ Post::
 NtGetContextThread
 ==================
 
-Signature::
-
-    * Mode: exploit
-
 Parameters::
 
     ** HANDLE ThreadHandle thread_handle
@@ -123,10 +115,6 @@ Parameters::
 
 NtSetContextThread
 ==================
-
-Signature::
-
-    * Mode: exploit
 
 Parameters::
 
@@ -192,10 +180,6 @@ Post::
 NtSuspendThread
 ===============
 
-Signature::
-
-    * Mode: exploit
-
 Parameters::
 
     ** HANDLE ThreadHandle thread_handle
@@ -208,10 +192,6 @@ Ensure::
 
 NtResumeThread
 ==============
-
-Signature::
-
-    * Mode: exploit
 
 Parameters::
 
@@ -253,10 +233,6 @@ Parameters::
 RtlCreateUserThread
 ===================
 
-Signature::
-
-    * Mode: exploit
-
 Parameters::
 
     ** HANDLE ProcessHandle process_handle
@@ -283,10 +259,6 @@ Post::
 
 NtQueueApcThread
 ================
-
-Signature::
-
-    * Mode: exploit
 
 Parameters::
 

@@ -9,10 +9,6 @@ Signature::
 NtCreateFile
 ============
 
-Signature::
-
-    * Mode: exploit
-
 Parameters::
 
     ** PHANDLE FileHandle file_handle
@@ -108,10 +104,6 @@ Post::
 NtOpenFile
 ==========
 
-Signature::
-
-    * Mode: exploit
-
 Parameters::
 
     ** PHANDLE FileHandle file_handle
@@ -201,10 +193,6 @@ Logging::
 
 NtWriteFile
 ===========
-
-Signature::
-
-    * Mode: exploit
 
 Parameters::
 

@@ -10,7 +10,6 @@ URLDownloadToFileW
 Signature::
 
     * Library: urlmon
-    * Mode: exploit
     * Return value: HRESULT
 
 Parameters::

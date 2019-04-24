@@ -106,7 +106,6 @@ RtlDispatchException
 Signature::
 
     * Callback: addr
-    * Mode: exploit
     * Library: ntdll
     * Logging: no
     * Return value: BOOL

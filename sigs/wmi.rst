@@ -4,7 +4,6 @@ Signature::
     * Calling convention: WINAPI
     * Category: misc
     * Library: __wmi__
-    * Mode: exploit
     * Prune: resolve
     * Return value: HRESULT
 

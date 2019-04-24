@@ -465,7 +465,6 @@ Signature::
 
     * Callback: module
     * Library: ncrypt
-    * Mode: dumptls
     * Prune: resolve
     * Return value: NTSTATUS
 
@@ -520,7 +519,6 @@ Signature::
 
     * Callback: module
     * Library: ncrypt
-    * Mode: dumptls
     * Prune: resolve
     * Return value: NTSTATUS
 

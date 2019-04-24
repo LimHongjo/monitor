@@ -11,7 +11,6 @@ Signature::
 
     * Library: kernel32
     * Logging: always
-    * Mode: exploit
     * Return value: BOOL
     * Special: true
 
@@ -112,7 +111,6 @@ ShellExecuteExW
 Signature::
 
     * Library: shell32
-    * Mode: exploit
     * Return value: BOOL
 
 Parameters::

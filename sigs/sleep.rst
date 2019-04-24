@@ -10,7 +10,6 @@ NtDelayExecution
 Signature::
 
     * Library: ntdll
-    * Mode: exploit
     * Return value: NTSTATUS
 
 Parameters::
