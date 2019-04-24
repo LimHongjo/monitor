@@ -1,3 +1,6 @@
+global:
+  mode: exploit
+
 COleScript_Compile:
   module: jscript
   offsets:
