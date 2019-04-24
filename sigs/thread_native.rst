@@ -9,6 +9,10 @@ Signature::
 NtCreateThread
 ==============
 
+Signature::
+
+    * Mode: exploit
+
 Parameters::
 
     ** PHANDLE ThreadHandle thread_handle
@@ -106,6 +110,10 @@ Post::
 
 NtGetContextThread
 ==================
+
+Signature::
+
+    * Mode: exploit
 
 Parameters::
 
