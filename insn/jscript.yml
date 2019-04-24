@@ -1,28 +1,20 @@
 COleScript_Compile:
   module: jscript
   offsets:
-    0x4ce7c6df:
-      bitmode: 64
-      offset: 0x8570
-      register: r8
-      stack: 56
+    0x49b3acf5:
+      bitmode: 32
+      offset: 0x1da4d
+      stack: 8
       logging:
-      - u script r8
-      - u type stk0
+      - u script stk0
 
-ActiveXObjectFncObj_Construct:
+JsEval:
   module: jscript
-  init: jscript_init
   offsets:
-    0x4ce7c6df:
-      bitmode: 64
-      offset: 0x17d10
-      registers: rcx r9
-      logging: u objname objname
+    0x49b3acf5:
+      bitmode: 32
+      offset: 0x263f
+      stack: 16 20
+      logging: u script script
       pre: |
-        wchar_t *objname = NULL; void *session = ((void **) rcx)[3];
-
-        VAR *value = iexplore_var_getvalue((VAR *) r9, session);
-        if(value != NULL) {
-            objname = *((wchar_t **) value + 1);
-        }
+        wchar_t *script = (wchar_t *)*(unsigned int *)(*(unsigned int *)(16 * stk0 + stk1 - 8) + 8);
