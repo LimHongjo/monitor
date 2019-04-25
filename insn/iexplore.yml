@@ -1,24 +1,30 @@
 global:
-  category: iexplore
-  mode: iexplore
+  mode: exploit
 
-JsGlobalObjectDefaultEvalHelper:
-  module: jscript9
+CDocument_Write:
+  module: mshtml
   offsets:
-    0x555fea21:
-      offset: 0xca520
+    0x49b3aeb3:
+      bitmode: 32
+      offset: 0x1f3f06
       stack: 8
-      logging: u script stk0
-    0x525b806a:
-      offset: 0x14c30a
-      stack: 8
-      logging: u script stk0
+      logging:
+      - z lines &b
+      pre: |
+        bson b; char index[8];
+        bson_init_size(&b, mem_suggested_size(4096));
+        bson_append_start_array(&b, "lines");
 
-Math_random:
-  module: jscript
-  offsets:
-    0x4ce7c6df:
-      bitmode: 64
-      offset: 0x602e0
-      register: rsi
-      logging: q value *(uint64_t *)(rsi + 8)
+        unsigned int elements = *(unsigned int *)(stk0 + 0x0c);
+        unsigned int size = *(unsigned int *)(stk0 + 0x10);
+        unsigned int cnt = 0;
+        for (unsigned int n = 0; n < size; n++) {
+          if (*(unsigned int *)elements == 0x08) { // VT_BSTR field in enum VARENUM, 0x08
+            our_snprintf(index, sizeof(index), "%d", cnt++);
+            log_wstring(&b, index, *(BSTR *)(elements + 0x08), sys_string_length(*(BSTR *)(elements + 0x08)));
+          }
+          elements += 0x10;
+        }
+
+        bson_append_finish_array(&b);
+        bson_finish(&b);
