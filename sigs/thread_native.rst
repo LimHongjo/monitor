@@ -9,10 +9,6 @@ Signature::
 NtCreateThread
 ==============
 
-Signature::
-
-    * Mode: exploit
-
 Parameters::
 
     ** PHANDLE ThreadHandle thread_handle
