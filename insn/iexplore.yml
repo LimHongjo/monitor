@@ -28,3 +28,5 @@ CDocument_Write:
 
         bson_append_finish_array(&b);
         bson_finish(&b);
+      Post: |
+        bson_destroy(&b);
