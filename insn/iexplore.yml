@@ -30,3 +30,19 @@ CDocument_Write:
         bson_finish(&b);
       Post: |
         bson_destroy(&b);
+
+CElement_AppendChild:
+  module: mshtml
+  offsets:
+    0x49b3aeb3:
+      bitmode: 32
+      offset: 0x1f29ff
+      stack: 8
+      logging:
+      - u text bstr
+      pre: |
+        wchar_t *bstr = (wchar_t *)malloc(1024);
+        int (*get_innerHTML)(void *, void *) = 0x6379bcb1;
+        get_innerHTML(stk0, bstr);
+      Post: |
+        free(bstr);
