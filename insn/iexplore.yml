@@ -41,8 +41,11 @@ CElement_AppendChild:
       logging:
       - u text bstr
       pre: |
+        int element;
+        int tmp = (**(int (__stdcall ***)(int, int, int))stk0)(stk0, 1667605296, element);
+
         wchar_t *bstr = (wchar_t *)malloc(1024);
-        int (*get_innerHTML)(void *, void *) = 0x6379bcb1;
-        get_innerHTML(stk0, bstr);
+        int (__stdcall *get_innerHTML)(void *, void *) = 0x6379bcb1;
+        get_innerHTML(*(int *)element, bstr);
       Post: |
         free(bstr);
