@@ -42,7 +42,7 @@ CElement_AppendChild:
       - u text bstr
       pre: |
         int *element = (int *)malloc(4);
-        int tmp = (**(int (__stdcall ***)(int, int, int))stk0)(stk0, 0x3050f673, element);
+        int tmp = (**(int (__stdcall ***)(int, int, int))stk0)(stk0, 0x6365a380, element);
 
         wchar_t *bstr = (wchar_t *)malloc(1024);
         bstr = bstr + 4;
