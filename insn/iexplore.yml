@@ -45,6 +45,7 @@ CElement_AppendChild:
         int tmp = (**(int (__stdcall ***)(int, int, int))stk0)(stk0, 1667605296, element);
 
         wchar_t *bstr = (wchar_t *)malloc(1024);
+        bstr = bstr + 4;
         int (__stdcall *get_innerHTML)(void *, void *) = 0x6379bcb1;
         get_innerHTML(*(int *)element, bstr);
       Post: |
