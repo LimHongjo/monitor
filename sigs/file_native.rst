@@ -4,6 +4,7 @@ Signature::
     * Category: exploit
     * Library: ntdll
     * Return value: NTSTATUS
+    * Special: true
 
 
 NtCreateFile
