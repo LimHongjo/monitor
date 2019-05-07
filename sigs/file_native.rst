@@ -1,7 +1,7 @@
 Signature::
 
     * Calling convention: WINAPI
-    * Category: file
+    * Category: exploit
     * Library: ntdll
     * Return value: NTSTATUS
 
