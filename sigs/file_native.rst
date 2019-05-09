@@ -360,6 +360,10 @@ Interesting::
 NtSetInformationFile
 ====================
 
+Signature::
+
+    * Mode: exploit
+
 Parameters::
 
     ** HANDLE FileHandle file_handle
