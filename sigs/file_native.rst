@@ -1,14 +1,17 @@
 Signature::
 
     * Calling convention: WINAPI
-    * Category: exploit
+    * Category: file
     * Library: ntdll
     * Return value: NTSTATUS
-    * Special: true
 
 
 NtCreateFile
 ============
+
+Signature::
+
+    * Mode: exploit
 
 Parameters::
 
@@ -105,6 +108,10 @@ Post::
 NtOpenFile
 ==========
 
+Signature::
+
+    * Mode: exploit
+
 Parameters::
 
     ** PHANDLE FileHandle file_handle
@@ -194,6 +201,10 @@ Logging::
 
 NtWriteFile
 ===========
+
+Signature::
+
+    * Mode: exploit
 
 Parameters::
 
