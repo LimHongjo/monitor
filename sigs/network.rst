@@ -322,6 +322,7 @@ HttpOpenRequestA
 
 Signature::
 
+    * Mode: exploit
     * Library: wininet
     * Return value: HINTERNET
 
@@ -350,6 +351,7 @@ HttpOpenRequestW
 
 Signature::
 
+    * Mode: exploit
     * Library: wininet
     * Return value: HINTERNET
 
