@@ -107,10 +107,6 @@ Post::
 NtGetContextThread
 ==================
 
-Signature::
-
-    * Mode: exploit
-
 Parameters::
 
     ** HANDLE ThreadHandle thread_handle

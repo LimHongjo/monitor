@@ -112,7 +112,6 @@ ShellExecuteExW
 Signature::
 
     * Library: shell32
-    * Mode : exploit
     * Return value: BOOL
 
 Parameters::
