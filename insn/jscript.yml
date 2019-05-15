@@ -10,12 +10,12 @@ COleScript_Compile:
       stack: 8
       logging:
       - u script stk0
-    0x4c37b848:
-      bitmode: 64
+    0x4ce7b848:
+      bitmode: 32
       offset: 0x191f9
-      register: rax
+      register: eax
       logging:
-      - u script rax
+      - u script eax
 
 #JsEval:
 #  module: jscript

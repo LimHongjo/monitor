@@ -31,7 +31,7 @@ CDocument_Write:
       Post: |
         bson_destroy(&b);
     0x4ce7b8f3:
-      bitmode: 64
+      bitmode: 32
       offset: 0x105185
       stack: 8
       logging:
