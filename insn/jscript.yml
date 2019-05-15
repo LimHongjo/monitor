@@ -10,9 +10,9 @@ COleScript_Compile:
       stack: 8
       logging:
       - u script stk0
-    0x4ce7c6df:
+    0x4c37b848:
       bitmode: 64
-      offset: 0x8570
+      offset: 0x191f9
       register: rax
       logging:
       - u script rax
