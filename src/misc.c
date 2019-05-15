@@ -1759,13 +1759,16 @@ uint8_t *module_addr_timestamp_mod(
 insnoff_t *module_addr_timestamp2(uint8_t *module_address, insnoff_t *io)
 {
     uint32_t timestamp = module_timestamp(module_address);
+    pipe("DEBUG:timestamp check start");
 
     for (; io->timestamp != 0; io++) {
         if(timestamp == io->timestamp) {
+            pipe("DEBUG:timestamp check success");
             return io;
         }
     }
 
+    pipe("DEBUG:timestamp check fail");
     log_action("gatherer");
     return NULL;
 }
@@ -1778,9 +1781,11 @@ insnoff_t *module_addr_timestamp_modinsn(
 
     for (; mi->funcname != NULL; mi++) {
         if(strcmp(mi->funcname, funcname) == 0) {
+            pipe("DEBUG:funcname check success");
             return module_addr_timestamp2(module_address, mi->insnoff);
         }
     }
+    pipe("DEBUG:funcname check fail");
     return NULL;
 }
 
