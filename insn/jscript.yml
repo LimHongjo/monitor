@@ -12,7 +12,7 @@ COleScript_Compile:
       - u script stk0
     0x4c37b848:
       bitmode: 64
-      offset: 0x191f9
+      offset: 0x8570
       register: rax
       logging:
       - u script rax

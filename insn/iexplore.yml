@@ -32,7 +32,7 @@ CDocument_Write:
         bson_destroy(&b);
     0x4ce7b8f3:
       bitmode: 64
-      offset: 0x105185
+      offset: 0x190400
       stack: 8
       logging:
       - z lines &b
