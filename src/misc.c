@@ -1759,6 +1759,9 @@ uint8_t *module_addr_timestamp_mod(
 insnoff_t *module_addr_timestamp2(uint8_t *module_address, insnoff_t *io)
 {
     uint32_t timestamp = module_timestamp(module_address);
+    char tmp[256];
+    sprintf(tmp, "DEBUG:timestamp is %d", timestamp);
+    pipe(tmp);
     pipe("DEBUG:timestamp check start");
 
     for (; io->timestamp != 0; io++) {
