@@ -30,3 +30,29 @@ CDocument_Write:
         bson_finish(&b);
       Post: |
         bson_destroy(&b);
+    0x4ce7b8f3:
+      bitmode: 64
+      offset: 0x105185
+      stack: 8
+      logging:
+      - z lines &b
+      pre: |
+        bson b; char index[8];
+        bson_init_size(&b, mem_suggested_size(4096));
+        bson_append_start_array(&b, "lines");
+
+        unsigned int elements = *(unsigned int *)(stk0 + 0x0c);
+        unsigned int size = *(unsigned int *)(stk0 + 0x10);
+        unsigned int cnt = 0;
+        for (unsigned int n = 0; n < size; n++) {
+          if (*(unsigned int *)elements == 0x08) { // VT_BSTR field in enum VARENUM, 0x08
+            our_snprintf(index, sizeof(index), "%d", cnt++);
+            log_wstring(&b, index, *(BSTR *)(elements + 0x08), sys_string_length(*(BSTR *)(elements + 0x08)));
+          }
+          elements += 0x10;
+        }
+
+        bson_append_finish_array(&b);
+        bson_finish(&b);
+      Post: |
+        bson_destroy(&b);

@@ -10,14 +10,20 @@ COleScript_Compile:
       stack: 8
       logging:
       - u script stk0
+    0x4c37b848:
+      bitmode: 64
+      offset: 0x191f9
+      register: rax
+      logging:
+      - u script rax
 
-JsEval:
-  module: jscript
-  offsets:
-    0x49b3acf5:
-      bitmode: 32
-      offset: 0x263f
-      stack: 16 20
-      logging: u script script
-      pre: |
-        wchar_t *script = (wchar_t *)*(unsigned int *)(*(unsigned int *)(16 * stk0 + stk1 - 8) + 8);
+#JsEval:
+#  module: jscript
+#  offsets:
+#    0x49b3acf5:
+#      bitmode: 32
+#      offset: 0x263f
+#      stack: 16 20
+#      logging: u script script
+#      pre: |
+#        wchar_t *script = (wchar_t *)*(unsigned int *)(*(unsigned int *)(16 * stk0 + stk1 - 8) + 8);
